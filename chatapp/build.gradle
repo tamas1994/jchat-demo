@@ -64,4 +64,5 @@ dependencies {
     compile project(':reclib-qq')
     compile project(':reclib-testemoticons')
     compile 'com.contrarywind:Android-PickerView:3.2.4'
+    compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
 }

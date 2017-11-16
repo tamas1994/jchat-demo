@@ -109,7 +109,7 @@
         </service>
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="hmvUjVN55vCEHDGGYiMAWc3SzX6y04QF"/>
+            android:value="asdf"/>
 
         <!-- Required SDK核心功能 -->
         <receiver
@@ -380,6 +380,15 @@
             android:screenOrientation="portrait"
             android:name=".activity.GroupAvatarActivity"
             android:theme="@style/AppTh"/>
+
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".test.LoginRegisterActivity"
+            android:exported="true"
+            android:theme="@style/AppTh"/>
+
+
     </application>
 
 </manifest>
