@@ -4,7 +4,7 @@ android {
     buildToolsVersion "25.0.1"
 
     defaultConfig {
-        applicationId "io.jchat.android"
+        applicationId "cn.sportstory.android"
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 61
@@ -16,21 +16,20 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //shrinkResources true
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
 
     signingConfigs {
-        release {
-            storeFile file("release.keystore")
-            storePassword "jpush-release"
-            keyAlias "release.keystore"
-            keyPassword "jpush-release"
-        }
         debug {
-            storeFile file("debug.keystore")
-            storePassword "jpush-debug"
-            keyAlias "debug.keystore"
-            keyPassword "jpush-debug"
+            storeFile file("../extra/signature/keystorefile.jks")
+            storePassword "12345678"
+            keyAlias "alias"
+            keyPassword "12345678"
         }
     }
     sourceSets {
