@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.socks.library.KLog;
@@ -12,6 +13,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.jpush.im.android.api.JMessageClient;
+import cn.jpush.im.android.api.model.Conversation;
 import cn.jpush.im.api.BasicCallback;
 import jiguang.chat.R;
 
@@ -26,6 +28,11 @@ public class LoginRegisterActivity extends Activity {
     EditText mEtUserName;
     @Bind(R.id.et_password)
     EditText mEtPassword;
+
+    @Bind(R.id.et_to)
+    EditText mEtTo;
+    @Bind(R.id.btn_create_conversation)
+    Button mBtnCreateConversation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState){
@@ -68,6 +75,14 @@ public class LoginRegisterActivity extends Activity {
     public void onBtnLogout(View view){
         JMessageClient.logout();
 
+
+    }
+
+    @OnClick(R.id.btn_create_conversation)
+    public void onBtnCreateConversationClicked(View view){
+        String to=mEtTo.getEditableText().toString();
+        Conversation conversation=Conversation.createSingleConversation(to);
+        KLog.i("title:"+conversation.getTitle()+"  type:"+conversation.getType());
 
     }
 }

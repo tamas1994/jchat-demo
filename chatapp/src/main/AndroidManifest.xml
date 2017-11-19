@@ -164,6 +164,7 @@
             android:theme="@style/BaseThemes"/>
         <activity
             android:screenOrientation="portrait"
+            android:exported="true"
             android:name=".activity.AboutJChatActivity"
             android:theme="@style/BaseThemes"/>
         <!--这里有个需要注意的地方就是,自定义的弹窗需要自定义一个theme否则系统会默认给设置padding自己设置的属性不生效-->

@@ -24,11 +24,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
-        android:layout_marginTop="60dp"
         android:id="@+id/btn_logout"
         android:text="登出"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/et_to"
+            android:hint="聊天对象"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_create_conversation"
+            android:text="创建会话"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 
 
